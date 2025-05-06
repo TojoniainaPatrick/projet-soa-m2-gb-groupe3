@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modification de bénéficiaire</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .header {
+      background-color: #0056b3;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+    }
+    .content {
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+    .footer {
+      text-align: center;
+      padding: 10px;
+      font-size: 12px;
+      color: #666;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+    th, td {
+      padding: 10px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Modification de bénéficiaire</h1>
+    </div>
+    <div class="content">
+      <p>Bonjour,</p>
+      <p>Un changement de bénéficiaire a été effectué sur la police <strong>{{numeroPolice}}</strong>.</p>
+      
+      <table>
+        <tr>
+          <th>Détails</th>
+          <th>Valeur</th>
+        </tr>
+        <tr>
+          <td>Bénéficiaire</td>
+          <td>{{beneficiaire.prenom}} {{beneficiaire.nom}}</td>
+        </tr>
+        <tr>
+          <td>Pourcentage</td>
+          <td>{{beneficiaire.pourcentage}}%</td>
+        </tr>
+        <tr>
+          <td>Lien de parenté</td>
+          <td>{{beneficiaire.lienParente}}</td>
+        </tr>
+        <tr>
+          <td>Date de modification</td>
+          <td>{{dateModification}}</td>
+        </tr>
+      </table>
+      
+      <p>Veuillez consulter votre espace client pour plus de détails.</p>
+      <p>Cordialement,<br>L'équipe Assurance Vie</p>
+    </div>
+    <div class="footer">
+      <p>Cet email a été envoyé automatiquement, merci de ne pas y répondre.</p>
+      <p>&copy; {{annee}} Assurance Vie. Tous droits réservés.</p>
+    </div>
+  </div>
+</body>
+</html>
